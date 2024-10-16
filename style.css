@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+    background-color: #f4fcff;
+    font-family: "Poppins", sans-serif;
+    padding: 5% 14%;
+    margin: 0%;
+    cursor: default;
+}
+
+.spacer-top{
+    margin-top: 150px;
+    visibility: hidden;
+}
+
+.spacer-bottom{
+    margin-bottom: 150px;
+}
+
+.spacer-top-short{
+    margin-top: 25px;
+    visibility: hidden;
+}
+
+.spacer-bottom-short{
+    margin-bottom: 25px;
+}
+
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav .me{
+    display: flex;
+    align-items: center;
+}
+
+nav .me img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+nav .me h1{
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+nav ul{
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    font-weight: 500;
+}
+
+nav ul li{
+    margin-left: 20px;
+}
+
+header{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .titre{
+    flex:4;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.titre-travaux{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.titre-travaux span{
+    text-align: center;
+    margin: 15px;
+}
+
+header .texte{
+    flex:6  
+}
+
+.a-propos .button_box{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.moteur-langage
+{
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.moteur-langage .moteur
+{
+    display: flex;
+    width: 30%;
+    height: 250px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hide
+{
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 1s ease-out;
+}
+
+.show
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.moteur-langage .moteur .moteur-item:nth-child(1)
+{
+    margin-top: 50px;
+    transition-delay: 250ms;
+}
+
+.moteur-langage .moteur .moteur-item:nth-child(3)
+{
+    margin-top: 100px;
+    transition-delay: 500ms;
+}
+
+.moteur-langage .moteur img
+{
+    width: 100px;
+}
+.moteur-langage .moteur .svg{
+    position: relative;
+}
+
+.moteur-langage .moteur .svg::after{
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+}
+
+.moteur-langage .langage
+{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.moteur-langage .langage .langage-item:nth-child(1)
+{
+    transition-delay: 700ms;
+}
+
+.moteur-langage .langage .langage-item:nth-child(2)
+{
+    transition-delay: 800ms;
+}
+
+.moteur-langage .langage .langage-item:nth-child(3)
+{
+    transition-delay: 900ms;
+}
+
+.moteur-langage .langage .langage-item:nth-child(4)
+{
+    transition-delay: 1s;
+}
+
+.hide_l
+{
+    scale: 0%;
+    transition: all 1s ease-out;
+}
+
+.show_l
+{
+    scale: 100%;
+}
+
+.cartes{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.cartes .carte{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    max-width: 500px;
+}
+
+.cartes .carte h3{
+    text-align: center;
+}
+
+.cartes .carte img{
+    width: 400px;
+    height: 317.467px;
+}
+
+.cartes .carte .header-deroulant{
+    position: relative;
+}
+
+.cartes .carte .header-deroulant img{
+    filter: brightness(100%);
+    transition: all 0.2s;
+}
+
+.cartes .carte .header-deroulant img:hover{
+    cursor: pointer;
+    filter: brightness(75%);
+}
+
+
+.cartes .carte .header-deroulant::after{
+    position: absolute;
+}
+
+.cartes .carte .header-deroulant .active::after{
+    filter: brightness(75%);
+    position: absolute;
+}
+
+.cartes .carte .contenu-deroulant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.2s ease-out; 
+}
+
+.cartes .carte .contenu-deroulant .active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.contact .reseau{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 150px;
+}
+
+.contact .reseau .reseau-box{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact .reseau .reseau-box .reseau-box-items{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .reseau .reseau-box .reseau-box-items .reseau-box-item{
+    display:flex;
+}
+
+.contact .reseau .reseau-box .reseau-box-items .reseau-box-item svg{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.contact .reseau .reseau-box .reseau-box-items .reseau-box-item span{
+    margin-left: 5px;
+}
+
+.contact .coordonees{
+    font-weight: 300;
+    margin-right: 150px;
+}
+
+.credit{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.credit span{
+    font-size: 12px;
+}
+
+
+p{
+    line-height: 32.5px
+}
+
+.border-no-animation{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.border-no-animation::after{
+    content: ' ';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #000;
+}
+
+.border-no-animation:hover::after{
+    width: 100%;
+}
+
+.border-animation{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.border-animation::after{
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #000;
+    transition: width .2s ease-out;
+}
+
+.border-animation:hover::after{
+    width: 100%;
+}
+
+.border-animation-light{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    font-weight: 300;
+}
+
+.border-animation-light::after{
+    content: ' ';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #000;
+    transition: width .2s ease-out;
+}
+
+.border-animation-light:hover::after{
+    width: 100%;
+}
