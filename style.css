@@ -312,8 +312,10 @@ footer{
 }
 
 .contact .coordonees{
+    display: flex;
     font-weight: 300;
     margin-right: 150px;
+    flex-direction: column;
 }
 
 .credit{
